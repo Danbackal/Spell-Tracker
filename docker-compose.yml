@@ -1,0 +1,14 @@
+# running front and backend_attempt1 services
+
+services:
+  backend:
+    build: ./backend_attempt1
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./backend_attempt1:/app
+    command: ['python', 'main.py']
+
+
+  database:
+    image: postgres
